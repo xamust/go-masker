@@ -16,7 +16,7 @@ func TestCustomSingle(t *testing.T) {
 		}
 		return masker.fixedOverlay(i, 5, 16)
 	}
-	t.Log(masker.CustomMaskerString(testCase1, out))
+	t.Log(masker.OTMaskerString(testCase1, out))
 }
 
 func TestCustomList(t *testing.T) {
@@ -42,6 +42,6 @@ func TestCustomList(t *testing.T) {
 	}
 	masker.AddCustomMasker(customKey2, out2)
 
-	t.Log(masker.CustomMaskerArrString(customKey1, testCase1))
-	t.Log(masker.CustomMaskerArrString(customKey2, testCase2))
+	t.Log(masker.MaskerString(customKey1, testCase1))
+	t.Log(masker.MaskerString(customKey2, testCase2))
 }
